@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "categoria": "FRESADO 2D",
+    "titulo": "Contorno de Placa Base",
+    "descripcion": "Diseña una placa de 100x100mm. Usa compensación G41 y una entrada tangencial en arco de 10mm.",
+    "requisitos": { "G_code": "G41", "dist_min": 90, "points": 15 }
+  },
+  {
+    "id": 2,
+    "categoria": "TALADRADO",
+    "titulo": "Patrón de 8 Agujeros",
+    "descripcion": "Círculo de pernos (PCD) de 120mm. Usa ciclo G83 con picoteo de 2mm y retract de seguridad.",
+    "requisitos": { "G_code": "G83", "dist_min": 50, "points": 8 }
+  },
+  {
+    "id": 3,
+    "categoria": "CAJEADO",
+    "titulo": "Pocket con Isla Central",
+    "descripcion": "Caja de 80x80 con una isla circular de 30mm. La entrada debe ser en rampa o hélice.",
+    "requisitos": { "G_code": "G03", "dist_min": 150, "points": 40 }
+  },
+  {
+    "id": 4,
+    "categoria": "AVANZADO",
+    "titulo": "Acabado de Superficie 3D",
+    "descripcion": "Crea una rampa de 15 grados y aplica un acabado de flujo constante (Parallel).",
+    "requisitos": { "G_code": "G01", "dist_min": 300, "points": 200 }
+  }
+]
