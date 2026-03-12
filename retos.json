@@ -1,30 +1,54 @@
 [
   {
     "id": 1,
-    "categoria": "FRESADO 2D",
-    "titulo": "Contorno de Placa Base",
-    "descripcion": "Diseña una placa de 100x100mm. Usa compensación G41 y una entrada tangencial en arco de 10mm.",
-    "requisitos": { "G_code": "G41", "dist_min": 90, "points": 15 }
+    "categoria": "FRESADO Y TALADRADO",
+    "titulo": "Placa Base con Sujeciones",
+    "descripcion": "Placa de 100x100mm. Perfilado exterior a Z-10. Cuatro barrenos en las esquinas a Z-15.",
+    "search_query": "cnc milling plate 100x100 with 4 holes blueprint",
+    "requisitos": {
+      "G_code": ["G41", "G83"],
+      "X_span": 100.0,
+      "Y_span": 100.0,
+      "Z_min": -15.0
+    }
   },
   {
     "id": 2,
-    "categoria": "TALADRADO",
-    "titulo": "Patrón de 8 Agujeros",
-    "descripcion": "Círculo de pernos (PCD) de 120mm. Usa ciclo G83 con picoteo de 2mm y retract de seguridad.",
-    "requisitos": { "G_code": "G83", "dist_min": 50, "points": 8 }
+    "categoria": "CAJEADO Y ACABADO",
+    "titulo": "Caja Rectangular con Isla",
+    "descripcion": "Bloque de 150x100mm. Haz un pocket interno bajando hasta Z-20, dejando una isla central.",
+    "search_query": "pocket milling with island cnc drawing",
+    "requisitos": {
+      "G_code": ["G03", "G01"],
+      "X_span": 150.0,
+      "Y_span": 100.0,
+      "Z_min": -20.0
+    }
   },
   {
     "id": 3,
-    "categoria": "CAJEADO",
-    "titulo": "Pocket con Isla Central",
-    "descripcion": "Caja de 80x80 con una isla circular de 30mm. La entrada debe ser en rampa o hélice.",
-    "requisitos": { "G_code": "G03", "dist_min": 150, "points": 40 }
+    "categoria": "ROSCADO Y CHAFLÁN",
+    "titulo": "Brida de Acoplamiento",
+    "descripcion": "Pieza circular de 80mm de diámetro. Haz 6 roscas M8 pasantes (Z-12) y un chaflán exterior.",
+    "search_query": "cnc flange 6 holes tapped blueprint",
+    "requisitos": {
+      "G_code": ["G84", "G02"],
+      "X_span": 80.0,
+      "Y_span": 80.0,
+      "Z_min": -12.0
+    }
   },
   {
     "id": 4,
-    "categoria": "AVANZADO",
-    "titulo": "Acabado de Superficie 3D",
-    "descripcion": "Crea una rampa de 15 grados y aplica un acabado de flujo constante (Parallel).",
-    "requisitos": { "G_code": "G01", "dist_min": 300, "points": 200 }
+    "categoria": "DINÁMICO",
+    "titulo": "Desbaste de Alta Velocidad",
+    "descripcion": "Pieza de 200x200mm. Usa Dynamic Milling para remover todo el material exterior hasta Z-25.",
+    "search_query": "dynamic milling toolpath example",
+    "requisitos": {
+      "G_code": ["G01"],
+      "X_span": 200.0,
+      "Y_span": 200.0,
+      "Z_min": -25.0
+    }
   }
 ]
